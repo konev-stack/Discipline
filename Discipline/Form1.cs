@@ -16,8 +16,7 @@ namespace Discipline
             
             
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void DisableCheckboxes()
         {
             checkbox1.Enabled = false;
             metroCheckBox1.Enabled = false;
@@ -25,14 +24,18 @@ namespace Discipline
             metroCheckBox3.Enabled = false;
             metroCheckBox4.Enabled = false;
             metroCheckBox5.Enabled = false;
-            //------------------------------
+        }
+        private void DisableClearTaskButtons()
+        {
             cleartask1.Enabled = false;
             cleartask2.Enabled = false;
             cleartask3.Enabled = false;
             cleartask4.Enabled = false;
             cleartask5.Enabled = false;
             cleartask6.Enabled = false;
-            //------------------------------
+        }
+        private void SetTaskstoReadOnly()
+        {
             task1.ReadOnly = true;
             task2.ReadOnly = true;
             task3.ReadOnly = true;
@@ -46,6 +49,24 @@ namespace Discipline
             task4due.ReadOnly = true;
             task5due.ReadOnly = true;
             task6due.ReadOnly = true;
+        }
+        private void UncheckCheckboxes()
+        {
+            checkbox1.Checked = false;
+            metroCheckBox1.Checked = false;
+            metroCheckBox2.Checked = false;
+            metroCheckBox3.Checked = false;
+            metroCheckBox4.Checked = false;
+            metroCheckBox5.Checked = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DisableCheckboxes();
+            //------------------------------
+            DisableClearTaskButtons();
+            //------------------------------
+            SetTaskstoReadOnly();
 
             task1.Text = Properties.Settings.Default.tasktask1;
             task2.Text = Properties.Settings.Default.tasktask2;
@@ -260,33 +281,16 @@ namespace Discipline
         private void resetButton_Click(object sender, EventArgs e)
         {
 
-            
-            //----------------------------------------------------------//
-            checkbox1.Enabled = false;
-            metroCheckBox1.Enabled = false;
-            metroCheckBox2.Enabled = false;
-            metroCheckBox3.Enabled = false;
-            metroCheckBox4.Enabled = false;
-            metroCheckBox5.Enabled = false;
-            //-----------------------------
-            cleartask1.Enabled = false;
-            cleartask2.Enabled = false;
-            cleartask3.Enabled = false;
-            cleartask4.Enabled = false;
-            cleartask5.Enabled = false;
-            cleartask6.Enabled = false;
-            //-----------------------------
-            checkbox1.Checked = false;
-            metroCheckBox1.Checked = false;
-            metroCheckBox2.Checked = false;
-            metroCheckBox3.Checked = false;
-            metroCheckBox4.Checked = false;
-            metroCheckBox5.Checked = false;
 
+            //----------------------------------------------------------//
+            DisableCheckboxes();
+            //-----------------------------
+            DisableClearTaskButtons();
+            //-----------------------------
+            UncheckCheckboxes();
             //----------------------------------------------------------//
             freeSpace = 6;
             tasksLeft.Text = freeSpace.ToString();
-
 
             task1.Text = "";
             task2.Text = "";
