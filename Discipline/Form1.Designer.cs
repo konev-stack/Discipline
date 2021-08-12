@@ -118,7 +118,6 @@ namespace Discipline
             this.dueLabel.Size = new System.Drawing.Size(56, 30);
             this.dueLabel.TabIndex = 3;
             this.dueLabel.Text = "Due:";
-            this.dueLabel.Click += new System.EventHandler(this.tasksLeft_Click);
             // 
             // dueTextBox
             // 
@@ -151,7 +150,6 @@ namespace Discipline
             this.dueTextBox.UseSelectable = true;
             this.dueTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.dueTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.dueTextBox.Click += new System.EventHandler(this.dueTextBox_Click);
             // 
             // addTaskButton
             // 
@@ -181,7 +179,6 @@ namespace Discipline
             this.tasklabel.Size = new System.Drawing.Size(76, 30);
             this.tasklabel.TabIndex = 6;
             this.tasklabel.Text = "TASKS:";
-            this.tasklabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // colorBorder
             // 
@@ -222,7 +219,6 @@ namespace Discipline
             this.task1.UseSelectable = true;
             this.task1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.task1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.task1.Click += new System.EventHandler(this.task1_Click);
             // 
             // task1due
             // 
@@ -255,8 +251,6 @@ namespace Discipline
             this.task1due.UseSelectable = true;
             this.task1due.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.task1due.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.task1due.Click += new System.EventHandler(this.metroTextBox1_Click);
-            // 
             // checkbox1
             // 
             this.checkbox1.AutoSize = true;
@@ -753,7 +747,6 @@ namespace Discipline
             this.tasksLeft.Size = new System.Drawing.Size(0, 0);
             this.tasksLeft.TabIndex = 35;
             this.tasksLeft.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tasksLeft.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
             // quote
             // 
@@ -819,9 +812,7 @@ namespace Discipline
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Turquoise;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

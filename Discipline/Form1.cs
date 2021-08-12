@@ -107,20 +107,6 @@ namespace Discipline
             tasksLeft.Text = freeSpace.ToString();
         }
 
-        private void tasksLeft_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void task1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void addTaskButton_Click(object sender, EventArgs e)
         {
@@ -243,11 +229,6 @@ namespace Discipline
 
         }
 
-        private void dueTextBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void metroCheckBox2_CheckedChanged(object sender, EventArgs e)
         {
             task3due.Text = "Finished";
@@ -322,12 +303,6 @@ namespace Discipline
             task6due.Text = "";
 
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void cleartask1_Click(object sender, EventArgs e)
@@ -409,14 +384,6 @@ namespace Discipline
             cleartask6.Enabled = false;
         }
 
-
-
-
-        private void metroLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.tasktask1 = task1.Text;
@@ -437,25 +404,6 @@ namespace Discipline
 
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
 
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.tasktask1 = task1.Text;
-        }
-
-        private void testtextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-
-        }
     }
 }
